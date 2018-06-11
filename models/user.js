@@ -16,3 +16,4 @@ var userScheme=mongoose.Schema({
 })
 
 
+module.exports=mongoose.model('userl',userScheme);
