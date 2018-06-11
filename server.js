@@ -48,7 +48,18 @@ res.json({error:"Title,description,created_by are required fields"})
   }
 })
 
+app.post('/uproj',function(req,res,next){
 
+if(req.body.id1==''){
+
+res.json({error:"Pls enter a valid id"})
+}
+  
+  else{
+  
+  }
+
+})
 
 app.get("/", function (request, response) {
   response.sendFile(__dirname + '/views/index.html');
