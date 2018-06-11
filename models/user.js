@@ -2,6 +2,7 @@ var mongoose=require('mongoose');
 
 var userScheme=mongoose.Schema({
 
+  id1:Number,
   title:String,
   text:String,
   created_on:Date,

@@ -29,7 +29,8 @@ res.json({error:"Title,description,created_by are required fields"})
     newUser.text=req.body.desc;
     newUser.created_by=req.body.creat;
     newUser.created_on=new Date();
-    newUser.status_text=
+    newUser.status_text=req.body.stdesc;
+    newUser.assigned_to=req.body.iss;
   
   }
 })
