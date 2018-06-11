@@ -14,7 +14,7 @@
   $.ajax({
       type:"GET",
     dataType: 'jsonp',
-  url:"/all/",
+  url:"/all",
     success: function(data)
     {
     console.log('hello world :o');
