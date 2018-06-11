@@ -9,7 +9,7 @@ var userScheme=mongoose.Schema({
   updated_on:Date,
   created_by:String,
   assigned_to:String,
-  open:Boolean,
+  open:String,
   status_text:String
 
 

@@ -35,8 +35,8 @@ res.json({error:"Title,description,created_by are required fields"})
     newUser.created_on=new Date();
     newUser.status_text=req.body.stdesc;
     newUser.assigned_to=req.body.iss;
-    if(req.body.status=='open'){newUser.open=true}
-      else {newUser.open=false}
+    newUser.open=req.body.status;
+  
     
     newUser.save(function(err){
     if(err){
@@ -57,12 +57,16 @@ res.json({error:"Pls enter a valid id"})
   else{
   var obj=req.query;
     for(var ele in obj){if(obj[ele]==''){delete obj[ele]}}
-    obj.id1=
+    obj.id1=Number(obj.id1);
     console.log(obj);
+
+    obj["updated_on"]=new Date();
     user.findOne({ id1:req.query.id1}, function (err, doc){
   if(doc!=null){
   
     user.update({id1:req.query.id1},{$set:obj},function(err,doccount){
+      
+      if(err){console.log(err);}
       console.log(doccount)
     res.json({success:"updated"});
     
