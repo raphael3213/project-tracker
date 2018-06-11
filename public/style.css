@@ -74,7 +74,11 @@ footer {
 float:left;
 padding-right:40px
 }
+#output{
 
+padding-left:400px;
+
+}
 .issue {
   margin: 20px;
   padding: 5px;
