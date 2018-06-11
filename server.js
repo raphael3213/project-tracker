@@ -48,17 +48,18 @@ res.json({error:"Title,description,created_by are required fields"})
   }
 })
 
-app.post('/uproj',function(req,res,next){
+app.get('/upproj',function(req,res,next){
 
-if(req.body.id1==''){
+//if(req.body.id1==''){
 
-res.json({error:"Pls enter a valid id"})
-}
+//res.json({error:"Pls enter a valid id"})
+//}
   
-  else{
+  //else{
   
-  }
-
+    //user.find({})
+  //}
+console.log(req);
 })
 
 app.get("/", function (request, response) {
