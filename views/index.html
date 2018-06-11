@@ -47,16 +47,17 @@
     <br>
      <h2>
        Update project
+     
     </h2>
     <form action="upproj" method="get">
-      <input type="text" placeholder="*id" name="id">
+      <input type="text" placeholder="*id" name="id1">
        <input type="text" placeholder="Title(opt)" name="title">
-      <textarea type="text" placeholder="Description(opt)" style="width: 10000px,height: 3100px;" name="desc"></textarea><br>
-      <input type="text" placeholder="Created By(opt)" name="creat">
-      <input type="text" placeholder="Issued To(opt)" name="iss">
-      <input type="text" placeholder="Status desc(opt)" name="stdesc">
-      <input  type="radio" name="status" value="open" checked/>Open
-      <input  type="radio" name="status" value="closed"/>Closed
+      <textarea type="text" placeholder="Description(opt)" style="width: 10000px,height: 3100px;" name="text"></textarea><br>
+      <input type="text" placeholder="Created By(opt)" name="created_by">
+      <input type="text" placeholder="Issued To(opt)" name="assigned_to">
+      <input type="text" placeholder="Status desc(opt)" name="status_text">
+      <input  type="radio" name="open" value="open" checked/>Open
+      <input  type="radio" name="open" value="closed"/>Closed
       <input type="submit">
     </form>
     <br>

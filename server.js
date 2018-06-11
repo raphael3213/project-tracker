@@ -50,16 +50,14 @@ res.json({error:"Title,description,created_by are required fields"})
 
 app.get('/upproj',function(req,res,next){
 
-//if(req.body.id1==''){
-
-//res.json({error:"Pls enter a valid id"})
-//}
+if(req.query.id1==''){
+res.json({error:"Pls enter a valid id"})
+}
   
-  //else{
-  
-    //user.find({})
-  //}
-console.log(req.params);
+  else{
+  var
+  }
+console.log(req.query);
   res.json({noope:1})
 })
 
