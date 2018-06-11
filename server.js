@@ -25,7 +25,11 @@ res.json({error:"Title,description,created_by are required fields"})
   else{
   
   var newUser=new user;
-    
+    newUser.title=req.body.title;
+    newUser.text=req.body.desc;
+    newUser.created_by=req.body.creat;
+    newUser.created_on=new Date();
+    newUser.status_text=
   
   }
 })
