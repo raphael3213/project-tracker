@@ -42,7 +42,7 @@ res.json({error:"Title,description,created_by are required fields"})
     if(err){
       console.log(err)
     }
-    console.log(newUser);
+    //console.log(newUser);
       res.json(newUser)
     })
   }
@@ -57,12 +57,14 @@ res.json({error:"Pls enter a valid id"})
   else{
   var obj=req.query;
     for(var ele in obj){if(obj[ele]==''){delete obj[ele]}}
+    obj.id1=
     console.log(obj);
     user.findOne({ id1:req.query.id1}, function (err, doc){
   if(doc!=null){
   
-    user.update({id1:req.query.id1},{$set:obj},function(err,doc){
-    res.json
+    user.update({id1:req.query.id1},{$set:obj},function(err,doccount){
+      console.log(doccount)
+    res.json({success:"updated"});
     
     })
   
@@ -71,12 +73,9 @@ res.json({error:"Pls enter a valid id"})
       res.json({error:"id not valid"})
       }
 });
-    
-    
-    
-  }
+    }
 
-  res.json({noope:1})
+  
 })
 
 app.get("/", function (request, response) {
