@@ -82,6 +82,12 @@ res.json({error:"Pls enter a valid id"})
   
 })
 
+app.get('/getproj',function(req,res,next){
+
+  user.find()
+
+})
+
 app.get("/", function (request, response) {
   response.sendFile(__dirname + '/views/index.html');
 });
