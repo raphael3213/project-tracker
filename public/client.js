@@ -14,12 +14,17 @@
   $.ajax({
       type:"GET",
     dataType: 'jsonp',
-  url:"https://project-tracker12214.glitch.me/all?",
-    success:function(data)
+  url:"/all/",
+    success: function(data)
     {
-    
+    console.log('hello world :o');
     console.log(data);
     
+    },
+    error: function(err){
+    console.log("hello");
+    console.log(err.responseText
+);
     }
   
   })
