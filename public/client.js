@@ -13,7 +13,7 @@
   
   $.ajax({
       type:"GET",
-    dataType: 'jsonp',
+    dataType: 'json',
   url:"/all",
     success: function(data)
     {
@@ -23,8 +23,8 @@
     },
     error: function(err){
     console.log("hello");
-    console.log(err.responseText
-);
+      console.log(typeof(err.responseText))
+    console.log(err.responseText);
     }
   
   })
