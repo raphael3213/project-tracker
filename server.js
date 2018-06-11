@@ -59,7 +59,8 @@ app.get('/upproj',function(req,res,next){
   
     //user.find({})
   //}
-console.log(req);
+console.log(req.params);
+  res.json({noope:1})
 })
 
 app.get("/", function (request, response) {
