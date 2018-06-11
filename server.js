@@ -20,18 +20,27 @@ console.log("connected to database");
 app.post('/newproj',function(req,res,next){
 if(req.body.title==''||req.body.desc==''||req.body.creat=='')
 {
+  console.log(req.body);
 res.json({error:"Title,description,created_by are required fields"})
+  
 }
   else{
   
   var newUser=new user;
+    newUser.id1=Math.round(Math.random*1000000);
     newUser.title=req.body.title;
     newUser.text=req.body.desc;
     newUser.created_by=req.body.creat;
     newUser.created_on=new Date();
     newUser.status_text=req.body.stdesc;
     newUser.assigned_to=req.body.iss;
-  
+    if(req.body.status=='open'){newUser.open=true}
+      else {newUser.open=false}
+    
+    newUser.save(function(err){
+    if(err){console.log(err)}
+    console.log(newUser);
+    })
   }
 })
 
