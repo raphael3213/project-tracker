@@ -14,7 +14,7 @@
   $.ajax({
       type:"GET",
     dataType: 'jsonp',
-  url:"https://rain-scissor.glitch.me/all?",
+  url:"https://project-tracker12214.glitch.me/all?",
     success:function(data)
     {
     
