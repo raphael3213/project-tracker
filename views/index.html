@@ -22,10 +22,14 @@
   </head>
   <body>
     <header>
+      
+        
+      
       <h1>
         Issue Tracker
       </h1>
     </header>
+      <div id="submiss">
     <h2>
       New project
     </h2>
@@ -34,29 +38,39 @@
       <textarea type="text" placeholder="*Description" style="width: 10000px,height: 3100px;"></textarea><br>
       <input type="text" placeholder="*Created By">
       <input type="text" placeholder="Issued To(opt)">
-      <input type="text" placeholder="*Status desc(opt)">
+      <input type="text" placeholder="Status desc(opt)">
       <input type="submit">
     </form>
 
     <br>
      <h2>
-       
+       Update project
     </h2>
-    <form action="upproj">
+    <form action="upproj" method="post">
       <input type="text" placeholder="*id">
        <input type="text" placeholder="Title(opt)">
       <textarea type="text" placeholder="Description(opt)" style="width: 10000px,height: 3100px;"></textarea><br>
-      <input type="text" placeholder="*Created By(opt)">
+      <input type="text" placeholder="Created By(opt)">
       <input type="text" placeholder="Issued To(opt)">
-      <input type="text" placeholder="*Status desc(opt)">
+      <input type="text" placeholder="Status desc(opt)">
       <input type="submit">
     </form>
     <br>
+    <h2>
+      Find Project
+    </h2>
    <form action="getproj" method="get" >
-     <input type="text"  placeholder="id*">
+     <input type="text"  placeholder="*id">
+     <input type="submit">
     </form>
  
-    
+    </div>
+    <div id="output">
+      <h1>
+        Hello there
+      </h1>
+          
+    </div>
     
     <!-- import the webpage's client-side javascript file -->
     <script src="/client.js"></script>
