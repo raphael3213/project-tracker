@@ -17,7 +17,18 @@ console.log("connected to database");
 
 });
 
-app.get
+app.post('/newproj',function(req,res,next){
+if(req.body.title==''||req.body.desc==''||req.body.creat=='')
+{
+res.json({error:"Title,description,created_by are required fields"})
+}
+  else{
+  
+  var newUser=new user;
+    
+  
+  }
+})
 
 
 
