@@ -55,9 +55,27 @@ res.json({error:"Pls enter a valid id"})
 }
   
   else{
-  var
+  var obj=req.query;
+    for(var ele in obj){if(obj[ele]==''){delete obj[ele]}}
+    console.log(obj);
+    user.findOne({ id1:req.query.id1}, function (err, doc){
+  if(doc!=null){
+  
+    user.update({id1:req.query.id1},{$set:obj},function(err,doc){
+    res.json
+    
+    })
+  
   }
-console.log(req.query);
+      else{
+      res.json({error:"id not valid"})
+      }
+});
+    
+    
+    
+  }
+
   res.json({noope:1})
 })
 
