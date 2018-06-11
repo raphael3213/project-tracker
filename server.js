@@ -84,10 +84,27 @@ res.json({error:"Pls enter a valid id"})
 
 app.get('/getproj',function(req,res,next){
 
-  user.find()
+  user.findOne({id1:Number(req.query.id1)},{_id:0},function(err,doc){
+  
+  if(err){console.log(err)}
+    if(doc){
+    res.json(doc);}
+    
+    else{
+    res.json({error:"invalid id"})}
+  })
 
 })
+app.get('/all',function(req,res,next){
 
+user.find({},function(err,doc){
+
+if(err){console.log(err)}
+  
+  res.json(doc);
+})
+
+});
 app.get("/", function (request, response) {
   response.sendFile(__dirname + '/views/index.html');
 });
