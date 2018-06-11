@@ -27,7 +27,8 @@ res.json({error:"Title,description,created_by are required fields"})
   else{
   
   var newUser=new user;
-    newUser.id1=Math.round(Math.random*1000000);
+    
+    newUser.id1=Math.round(Math.random()*1000000);
     newUser.title=req.body.title;
     newUser.text=req.body.desc;
     newUser.created_by=req.body.creat;
@@ -38,8 +39,11 @@ res.json({error:"Title,description,created_by are required fields"})
       else {newUser.open=false}
     
     newUser.save(function(err){
-    if(err){console.log(err)}
+    if(err){
+      console.log(err)
+    }
     console.log(newUser);
+      res.json(newUser)
     })
   }
 })
